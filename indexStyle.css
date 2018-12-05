@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+
+img{
+	min-width: 100%;
+	height: auto;
+	/*display: block;*/
+}
+
+body{
+	margin-left:auto;
+	margin-right:auto;
+	position: relative;
+	line-height: 1.6;
+	font-family: "Roboto", sans-serif;
+	overflow-x: hidden;
+}
+
+.main-head{
+	background-size: 100% auto;
+    min-height:100vh;
+}
+
+/*The button for log in*/
+.btn-danger{
+	margin-top: 1%; 
+	font-size: 1.4em; 
+	float: left;
+	font-family: 'Bree Serif', serif;
+	color: #1a535c;
+}
+
+/*The button for sign up*/
+.btn-warning{
+	margin-top: 1%; 
+	font-size: 1.4em; 
+	margin-left: 2%;
+	float: left;
+	font-family: 'Bree Serif', serif;
+	color: #1a535c;
+}
+
+/*Sign up form*/
+* {box-sizing: border-box}
+/* Full-width input fields */
+	input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+/* Set a style for all buttons */
+.cancelbtn,
+.login,
+.signup{
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 50%;
+	opacity: 0.9;
+}
+
+button:hover {
+  	opacity:1;
+}
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+	padding: 14px 20px;
+	background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+	float: left;
+	/*width: 50%;*/
+}
+
+/* Add padding to container elements */
+.container {
+	padding: 16px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	font-size: 1em;
+	opacity: 1;
+	background-color: #fefefe;
+	margin: 0% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+	position: absolute;
+	right: 35px;
+	top: 15px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+	color: #f44336;
+	cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* The Close Button */
+.close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+	position: relative;
+	margin-left: 30%;
+	width: 1em;
+    border-radius: 50%;
+}
+
+.avatar{
+	width: 10em;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media (min-width:1025px){
+	.btn-danger{
+		margin-left:75%;
+		font-size: 1.4em; 
+	}
+	.btn-warning{
+		font-size: 1.4em; 
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+}
+
+@media (max-width:1024px){
+	.btn-danger{
+		margin-left:74%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.imgcontainer{
+		margin-left: 22%;
+	}
+}
+
+@media (max-width:923px){
+	.btn-danger{
+		margin-left:72%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.imgcontainer{
+		margin-left: 22%;
+	}
+}
+
+@media (max-width:803px){
+	.btn-danger{ 
+		margin-left:70%;
+	}
+	.btn-warning{
+		margin-left: 3%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.imgcontainer{
+		margin-left: 18%;
+	}
+}
+
+@media (max-width:760px){
+	.btn-danger{
+		margin-left:66%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.imgcontainer{
+		margin-left: 25%;
+	}
+	.modal-content{
+		width: 40%;
+	}
+}
+
+@media (max-width:745px){
+	.btn-danger{
+		margin-left:66%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.imgcontainer{
+		margin-left: 18%;
+	}
+	.modal-content{
+		width: 40%;
+	}
+}
+
+@media (max-width:680px){
+	.btn-danger{ 
+		margin-left:64%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 40%;
+	}
+}
+
+@media (max-width:640px){
+	.btn-danger{
+		margin-left:62%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 40%;
+	}
+}
+
+@media (max-width:590px){
+	.btn-danger{
+		margin-left:59%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 60%;
+	}
+	.imgcontainer{
+		margin-left: 27%;
+	}
+}
+
+@media (max-width:550px){
+	.btn-danger{
+		margin-left:56%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 60%;
+	}
+	.imgcontainer{
+		margin-left: 25%;
+	}
+}
+
+@media (max-width:500px){
+	.btn-danger{
+		margin-left:52%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 60%;
+	}
+	.imgcontainer{
+		margin-left: 23%;
+	}
+}
+
+@media (max-width:480px){
+	.btn-danger{ 
+		margin-left:50%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 60%;
+	}
+	.imgcontainer{
+		margin-left: 21%;
+	}
+}
+
+@media (max-width:430px){
+	.btn-danger{ 
+		margin-left:47%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 60%;
+	}
+	.imgcontainer{
+		margin-left: 20%;
+	}
+}
+
+@media (max-width:410px){
+	.btn-danger{
+		margin-left:45%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 60%;
+	}
+	.imgcontainer{
+		margin-left: 19%;
+	}
+}
+
+@media (max-width:385px){
+	.btn-danger{
+		margin-left:40%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 80%;
+	}
+}
+
+@media (max-width:350px){
+	.btn-danger{
+		margin-left:34%;
+	}
+	.btn-warning{
+		margin-left: 3%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 80%;
+	}
+}
+
+@media (max-width:320px){
+	.btn-danger{
+		margin-left:28%;
+	}
+	.btn-warning{
+		margin-left: 3%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 80%;
+	}
+}
+
+@media (max-width:300px){
+	.btn-danger{
+		margin-left:21%;
+	}
+	.btn-warning{
+		margin-left: 3%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.cancelbtn, .signupbtn {
+		width: 100%;
+	}
+	pan.psw {
+		display: block;
+		float: none;
+	}
+	.modal-content{
+		width: 80%;
+	}
+}
+
+@media (max-width:280px){
+	.btn-danger{
+		margin-left:16%;
+	}
+	.btn-warning{
+		margin-left: 3%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 40%;
+	}
+}
+
+@media (max-width:260px){
+	.btn-danger{
+		margin-left:14%;
+	}
+	.btn-warning{
+		margin-left: 3%;
+	}
+	.main-head{
+		background-image: url(images/back_1025+.jpg);
+	}
+	.modal-content{
+		width: 40%;
+	}
+}

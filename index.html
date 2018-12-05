@@ -1,0 +1,86 @@
+<html>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script type="text/javascript" src="node_modules/auth0-js/build/auth0.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <head>
+        <title> Train schedule </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="indexStyle.css">
+    </head>
+    <body>
+        <header class ="main-head"> 
+            <div class="text-right">
+                <button onclick="document.getElementById('id02').style.display='block'" class="btn btn-danger text-dark">LOG IN</button>
+                <button onclick="document.getElementById('id01').style.display='block'" type="button" id="sign_button"  class="btn btn-warning text-dark">SIGN UP</button>
+            </div>
+        </header>
+        
+<!-- Button to open the modal login form -->
+
+
+<!-- The Modal -->
+<div id="id02" class="modal">
+<!-- Modal Content -->
+    <div class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <img src="img/contact2.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="uname" required id="email_field">
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required id="passw_field">
+
+            <button onclick="login()" type="submit" class = "login">Log in</button>
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+    </div>
+</div>
+        
+        <!-- Button to open the modal -->
+        <!--<button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>-->
+
+        <!-- The Modal (contains the Sign Up form) -->
+        <div id="id01" class="modal">
+            <div class="modal-content animate" action="/action_page.php">
+                <div class="container">
+                    <h1>Sign Up</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+                    <label for="email"><b>Email</b></label>
+                    <p><input type="text" placeholder="Enter Email" name="email" required></p>
+
+                    <label for="psw"><b><p>Password</p></b></label>
+                    <p><input type="password" placeholder="Enter Password" name="psw" required></p>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <p><button type="submit" class="signup">Sign Up</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!-- Initialize Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+      var config = {
+        apiKey: "AIzaSyAhHvS21PscnljkB063RPbDQlVGromG2Vc",
+        authDomain: "train-transport.firebaseapp.com",
+        projectId: "train-transport",
+        storageBucket: "train-transport.appspot.com",
+        messagingSenderId: "217283815223"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="index.js"></script>
+
+</html>

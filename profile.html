@@ -1,0 +1,37 @@
+<html>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <head>
+        <title> Train schedule: user profile </title>
+        <link rel="stylesheet" type="text/css" href="profileStyle.css">
+    </head>
+    <body>
+        <button onclick="logout()" type="button" class="btn btn-warning">Log out</button>
+        <img src="images/contact2.png" alt="Avatar" class="avatar">
+        <div class="imformation"> 
+            <p class="nickname">tanya7492401</p>
+            <p class="score" > 75 </p>
+            <p class="points">points</p>
+            <p class= "name"> Tanya</p>
+            <p class="age">21 years old</p>
+        </div> 
+        <p class="title"> Spheres of interests: </p>
+        <div class="spheres">
+            <p>Math</p>
+            <p>Literature</p>
+        </div>
+    </body>
+    
+    <script src = "index.js"> </script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+      var config = {
+        apiKey: "AIzaSyAhHvS21PscnljkB063RPbDQlVGromG2Vc",
+        authDomain: "train-transport.firebaseapp.com",
+        projectId: "train-transport",
+        storageBucket: "train-transport.appspot.com",
+        messagingSenderId: "217283815223"
+      };
+      firebase.initializeApp(config);
+    </script>
+</html>
