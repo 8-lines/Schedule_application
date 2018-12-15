@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+html {
+	overflow-y: scroll;
+}
+
+body{
+    background-image: url(images/fullback1025.jpg);
+    background-size: 100% auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 20px;
+	position: relative;
+	line-height: 1.6;
+    overflow-x: hidden;
+	padding: 2%;
+	display: 'block';
+}
+
+.btn-light:first-of-type{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 0%; 
+	font-size: 1.4em; 
+    float: left;
+	font-family: "Franklin Gothic Demi", sans-serif;
+	color: #1a535c;
+}
+
+.btn-logout{
+	background-color: #D7DF01;
+	margin-left: 0%;
+    margin-top: 0%; 
+	font-size: 1.1em; 
+	float: right;
+	color: #1a535c;
+	font-family: "Franklin Gothic Demi", sans-serif;
+}
+
+.Schedule-top {
+	margin-top: 5%;
+}
+
+.ScheduleAll {
+	word-spacing: 10px;
+	margin-left: 10%;
+	width: 80%;
+	padding: 18px;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.2em;
+	line-height: 10px;
+	background-color: #E6E6E6;
+	border: 3px solid #cccccc;
+    border-radius: 4px;
+    text-align: left; 
+}

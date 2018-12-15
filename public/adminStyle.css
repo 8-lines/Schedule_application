@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+html {
+	overflow-y: scroll;
+}
+
+body{
+    background-image: url(images/fullback1025.jpg);
+    background-size: 100% auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 20px;
+	position: relative;
+	line-height: 1.6;
+    overflow-x: hidden;
+	padding: 2%;
+	display: 'block';
+}
+
+/* Add padding to container elements */
+.container {
+	padding: 16px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	font-size: 1em;
+	opacity: 1;
+	background-color: #fefefe;
+	margin: 0% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 30%; /* Could be more or less, depending on screen size */
+}
+
+.btn-logout{
+	background-color: #D7DF01;
+	margin-left: 0%;
+    margin-top: 0%; 
+	font-size: 1.1em; 
+	float: right;
+	color: #1a535c;
+	font-family: "Franklin Gothic Demi", sans-serif;
+	border: 1px solid rgb(10, 10, 10);
+}
+
+/*The button for log in*/
+.btn-danger{
+	margin-top: 1%; 
+	font-size: 1.4em; 
+	float: left;
+	font-family: 'Bree Serif', serif;
+	color: #1a535c;
+}
+
+/*The button for sign up*/
+.btn-warning{
+	margin-top: 1%; 
+	font-size: 1.4em; 
+	margin-left: 2%;
+	float: left;
+	font-family: 'Bree Serif', serif;
+	color: #1a535c;
+}

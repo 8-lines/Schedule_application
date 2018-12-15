@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+        </script>
+    <head>
+        <title> Train schedule </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="scheduleStyle.css">
+    </head>
+    <body>
+        <header class ="main-head"> 
+            <div class="text-right">
+                <button onclick="logout()" type="button" class="btn btn-logout text-dark">Log out</button>
+                <!-- <button onclick="document.getElementById('id04').style.display='block'" class="btn btn-danger text-dark">Add</button> -->
+            </div>
+        </header>
+        
+
+        <!-- <div id="id04" class="modal">
+            <div class="modal-content animate" action="/action_page.php">
+                <div class="container">
+                    <h1>New train</h1>
+                    <p>Add a new train</p>
+                    <hr>
+                    <p><input type="text" placeholder="Enter train number" name="trainNB" required id="trainNB_field_sign"></p>
+                    <p><input type="text" placeholder="Enter homestation id" name="homestationID" required id="homestationID_field_sign"></p>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+                        <p><button onclick="addTrain()"type="submit" class="signup">Add</button></p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+        <div class="ScheduleAll" id = "schedulesFieldAll"> </div>
+    </body>
+    
+    <!-- Initialize Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script>
+      var config = {
+        apiKey: "AIzaSyAhHvS21PscnljkB063RPbDQlVGromG2Vc",
+        authDomain: "train-transport.firebaseapp.com",
+        databaseURL: "https://train-transport.firebaseio.com",
+        projectId: "train-transport",
+        storageBucket: "train-transport.appspot.com",
+        messagingSenderId: "217283815223"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="scheduleScript.js"></script>
+</html>
