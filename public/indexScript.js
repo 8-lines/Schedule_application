@@ -1,51 +1,60 @@
 $(document).ready ( function (){
+  
   var dbScheduleCount  = firebase.database().ref().child('schedule').child('count');
   
   dbScheduleCount.on('value', snap => 
   {
-      var count = snap.val(); 
-      ShowSchedules(count);
+      var scheduleCount = snap.val(); 
+      ShowSchedules(scheduleCount);
   });
   
   
 });
 
-function ShowSchedules(count){
-  window.alert("YES!");
-  for (var i=0; i <= count; i++) {
-      var dbSchedule  = firebase.database().ref().child('schedule').child(i);
-      dbSchedule.on('value', snap => 
-      {
-          var schedule_rec = snap.val();
-          var list = '<div class = "Schedule">'+ schedule_rec.schedule + '</div>';
-          document.getElementById('schedulesField').innerHTML += list;
-      });
+function ShowSchedules(scheduleCount){
+  let ind = 1;
+  for (var i=1; i <= scheduleCount; i++) {
+
+    var dbSchedule  = firebase.database().ref().child('schedule').child('schedule ' + i);
+
+    dbSchedule.on('value', snap => 
+    {
+        var schedule = snap.val();
+        var dbStationsCount  = firebase.database().ref().child('route').child('route ' + schedule.route_id).child('stations').child('count');
+        dbStationsCount.on('value', snap => 
+        {
+            var stationsCount = snap.val(); 
+            var dbFirstStation  = firebase.database().ref().child('route').child('route ' + schedule.route_id).child('stations').child(1);
+            dbFirstStation.on('value', snap => 
+            {
+                var firstStation = snap.val(); 
+                var dbLastStation  = firebase.database().ref().child('route').child('route ' + schedule.route_id).child('stations').child(stationsCount);
+                dbLastStation.on('value', snap => 
+                {
+                    var lastStation = snap.val(); 
+                    var list = '<button  onclick="scheduleInd('+ ind +')" type="button" class="btn btn-info Schedule "' + '>' + schedule.train_number + ": " + 
+                    firstStation.station_name + " " + schedule.departure + " - " + lastStation.nextstation_name + " " + schedule.arrival + '</btn>';
+                    ind += 1;
+                    document.getElementById('schedulesField').innerHTML += list;
+                });
+            });
+        });
+        //window.alert(route);
+    });
+      
   }
 }
 
-// $(document).ready ( function (){
-//   $.ajax({
-//     type: "GET",
-//     url:'/schedulesList',
-//     dataType:"json",
-//     success: function(data){
-//       console.log(data);
-//       schedules = data;
-//       ShowSchedules(schedules);
-//     }
-//   });
-// });
-
-// function ShowSchedules(schedules){
-//   //window.alert("OK!");
-//   var list_temp = '<div class = "Schedule-top">' + '</div>';
-//   document.getElementById('schedulesField').innerHTML += list_temp;
-//     for (var i=0; i<schedules.length; i++) {
-//     var list = '<div class = "Schedule">'+ schedules[i].col1 + ": &nbsp;&nbsp;" + schedules[i].col2 + " &nbsp;" +
-//     schedules[i].col3 + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + schedules[i].col4 + " &nbsp;" + schedules[i].col5 + '</div>';
-//     document.getElementById('schedulesField').innerHTML += list;
-//   }
+// function scheduleInd(number, departure)
+// {
+//   document.location.href = "/schedule.html?schedule=" + number + '&deparure=' + departure;
 // }
+
+function scheduleInd(number)
+{
+  document.location.href = "/schedule.html?schedule=" + number;
+}
+
 
 var isLog = firebase.auth().currentUser;
 

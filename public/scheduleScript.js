@@ -1,14 +1,18 @@
 $(document).ready ( function (){
-  $.ajax({
-    type: "GET",
-    url:'/scheduleExact',
-    dataType:"json",
-    success: function(data){
-      console.log(data);
-      exactSchedules = data;
-      ShowSchedules(exactSchedules);
-    }
+  
+  var parameters = location.search.substring(1).split("&");
+  var temp = parameters[0].split("=");
+  number = unescape(temp[1]);
+  
+  var dbScheduleCount  = firebase.database().ref().child('schedule').child('count');
+  
+  dbScheduleCount.on('value', snap => 
+  {
+      var scheduleCount = snap.val(); 
+      ShowSchedules(scheduleCount);
   });
+  
+  
 });
 
 function ShowSchedules(exactSchedules){

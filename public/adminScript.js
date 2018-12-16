@@ -21,3 +21,11 @@ function writeTrainData(trainID, trainNB) {
   });
 
 }
+
+function directMain(){
+  document.location.href = "/index.html";
+}
+
+function directSchedule(){
+  document.location.href = "/schedule.html";
+}
