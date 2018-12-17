@@ -17,6 +17,22 @@ body{
 	display: 'block';
 }
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.info-input{
+	margin-right: 50%;
+}
 /* Add padding to container elements */
 .container {
 	padding: 16px;
@@ -33,31 +49,59 @@ body{
 }
 
 .btn-logout{
+	background-color: #f44336; 
+	color: white;
+	padding: 14px 20px;
+	margin-top: 3%;
+	margin-left: 3%;
+	width: 20%;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.btn-main{
+	background-color: #4CAF50; 
+	color: white;
+	padding: 14px 20px;
+	margin-top: 3%;
+	margin-left: 3%;
+	width: 20%;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.btn-add{
 	background-color: #D7DF01;
-	margin-left: 0%;
-    margin-top: 0%; 
-	font-size: 1.1em; 
-	float: right;
-	color: #1a535c;
-	font-family: "Franklin Gothic Demi", sans-serif;
-	border: 1px solid rgb(10, 10, 10);
+	color: white;
+	padding: 14px 20px;
+	margin-top: 3%;
+	margin-left: 17%;
+	width: 20%;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
 }
 
-/*The button for log in*/
-.btn-danger{
-	margin-top: 1%; 
-	font-size: 1.4em; 
-	float: left;
-	font-family: 'Bree Serif', serif;
-	color: #1a535c;
+.cancel-btn{
+	background-color: #f44336; 
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	width: 100%;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
 }
 
-/*The button for sign up*/
-.btn-warning{
-	margin-top: 1%; 
-	font-size: 1.4em; 
-	margin-left: 2%;
-	float: left;
-	font-family: 'Bree Serif', serif;
-	color: #1a535c;
+.add-btn{
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	width: 100%;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
 }

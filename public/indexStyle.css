@@ -38,7 +38,6 @@ body{
 /*The button for log in*/
 .btn-signup{
 	margin-top: 1%; 
-	margin-left: 1%;
 	font-size: 1.4em; 
 	float: left;
 	font-family: 'Bree Serif', serif;
@@ -54,6 +53,7 @@ body{
 /*The button for sign up*/
 .btn-login{
 	margin-top: 1%; 
+	margin-left: 1%;
 	font-size: 1.4em; 
 	float: left;
 	font-family: 'Bree Serif', serif;
@@ -247,10 +247,11 @@ hr {
 
 @media (min-width:1025px){
 	.btn-login{
-		margin-left:83%;
+		margin-left:93%;
 		font-size: 1.4em; 
 	}
 	.btn-signup{
+		margin-left:92%;
 		font-size: 1.4em; 
 	}
 	.main-head{

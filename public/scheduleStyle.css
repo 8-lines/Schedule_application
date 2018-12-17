@@ -1,23 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin');
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
 html {
 	overflow-y: scroll;
 }
 
 body{
-    background-image: url(images/fullback1025.jpg);
-    background-size: 100% auto;
 	margin-left:auto;
 	margin-right:auto;
-	margin-bottom: 20px;
 	position: relative;
 	line-height: 1.6;
     overflow-x: hidden;
 	padding: 2%;
 	display: 'block';
+	background-image: url(images/back1025.jpg);
+	background-size: 100% auto;
 }
 
-.btn-light:first-of-type{
+/* .btn-light:first-of-type{
     width: 50%;
     margin-left: 25%;
     margin-top: 0%; 
@@ -25,31 +24,54 @@ body{
     float: left;
 	font-family: "Franklin Gothic Demi", sans-serif;
 	color: #1a535c;
-}
+} */
 
 .btn-logout{
-	background-color: #D7DF01;
+	background-color: #f44336;
+	margin-left: 1%;
+    margin-top: 0%; 
+	font-size: 1.1em; 
+	float: right;
+	color: #1a535c;
+	font-family: "Roboto", sans-serif;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.btn-back{
+	background-color: #4CAF50;
 	margin-left: 0%;
     margin-top: 0%; 
 	font-size: 1.1em; 
 	float: right;
 	color: #1a535c;
-	font-family: "Franklin Gothic Demi", sans-serif;
+	font-family: "Roboto", sans-serif;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
 }
 
-.Schedule-top {
-	margin-top: 5%;
-}
 
 .ScheduleAll {
+	margin-left: 30%;
+	width: 40%;
+	margin-top: 5%;
+	background-color: rgb(230, 230, 230, 0.85);
+	border: 3px solid #cccccc;
+}
+
+.Schedule {
+	width: 96%;
 	word-spacing: 10px;
-	margin-left: 10%;
-	width: 80%;
+	margin-left: 2%;
+	margin-top: 2%;
+	margin-bottom: 2%;
 	padding: 18px;
 	font-family: "Roboto", sans-serif;
 	font-size: 1.2em;
 	line-height: 10px;
-	background-color: #E6E6E6;
+	background-color: rgb(230, 230, 230);
 	border: 3px solid #cccccc;
     border-radius: 4px;
     text-align: left; 

@@ -1,24 +1,48 @@
-function logout(){
-  isLog = 0;
-  firebase.auth().signOut();
-  document.location.href = "/index.html";
-}
+$(document).ready ( function (){
+  
+  var cookieEmail = getCookie ('LoginCookie');
+  //window.alert(cookieEmail);
+  if (cookieEmail == undefined)
+  {
+    document.location.href = "/403.html";
+  }
+  
+  
+});
+
+
 
 // добавление новых данных в таблицу
-function addTrain(){
-  var trainID = document.getElementById("trainID_field_sign").value.toString();
+function addSchedule(){
+  var routeID = document.getElementById("routeID_field_sign").value.toString();
   var trainNB = document.getElementById("trainNB_field_sign").value.toString();
+  var departureTM = document.getElementById("departureTM_field_sign").value.toString();
+  var arrivalTM = document.getElementById("arrivalTM_field_sign").value.toString();
 
-  writeTrainData(trainID, trainNB);
-  isLog = 1;
+  var dbScheduleCount  = firebase.database().ref().child('schedule').child('count');
+  dbScheduleCount.once('value', snap => 
+  {
+    let tmp = snap.val();
+    if (tmp == null) { tmp = 0; }
+    tmp += 1;
+    dbScheduleCount.set(tmp);
+    writeScheduleData(routeID, trainNB, departureTM, arrivalTM, tmp);
+  });
+  
+  window.alert("Successfully added!");
+
 }
 
-function writeTrainData(trainID, trainNB) {
+function writeScheduleData(routeID, trainNB, departureTM, arrivalTM, count) {
 
-  firebase.database().ref('train/' + substringArray[0]).set({
-    train_id: trainID,
+  firebase.database().ref('schedule/schedule ' + count).set({
     train_number: trainNB,
+    route_id: routeID,
+    departure: departureTM,
+    arrival: arrivalTM
   });
+
+  //window.alert("Successfully added!");
 
 }
 

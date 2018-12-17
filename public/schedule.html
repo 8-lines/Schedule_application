@@ -14,33 +14,13 @@
         <link rel="stylesheet" type="text/css" href="scheduleStyle.css">
     </head>
     <body>
-        <header class ="main-head"> 
-            <div class="text-right">
-                <button onclick="logout()" type="button" class="btn btn-logout text-dark">Log out</button>
-                <!-- <button onclick="document.getElementById('id04').style.display='block'" class="btn btn-danger text-dark">Add</button> -->
-            </div>
-        </header>
-        
-
-        <!-- <div id="id04" class="modal">
-            <div class="modal-content animate" action="/action_page.php">
-                <div class="container">
-                    <h1>New train</h1>
-                    <p>Add a new train</p>
-                    <hr>
-                    <p><input type="text" placeholder="Enter train number" name="trainNB" required id="trainNB_field_sign"></p>
-                    <p><input type="text" placeholder="Enter homestation id" name="homestationID" required id="homestationID_field_sign"></p>
-
-                    <div class="clearfix">
-                        <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
-                        <p><button onclick="addTrain()"type="submit" class="signup">Add</button></p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        
-        <div class="ScheduleAll" id = "schedulesFieldAll"> </div>
+        <div class="text-right">
+            <button onclick="logout()" type="button" class="btn btn-logout text-dark">Log out</button>
+            <button onclick="directMain()" type="button" class="btn btn-back text-dark">Go to main</button>
+        </div>
     </body>
+        
+    <div class="ScheduleAll" id = "scheduleField"> </div>
     
     <!-- Initialize Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
@@ -56,4 +36,5 @@
       firebase.initializeApp(config);
     </script>
     <script src="scheduleScript.js"></script>
+    <script src="cookieScript.js"></script>
 </html>

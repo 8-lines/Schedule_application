@@ -15,31 +15,37 @@
     </head>
 
     <body>
+            <button onclick="document.getElementById('id_addschedule').style.display='block'" class="btn btn-add text-dark">Add schedule</button>
+            <button onclick="directMain()" type="button" class="btn btn-main text-dark">Go to main</button>
+            <button onclick="logout()" type="button" class="btn btn-logout text-dark">Log out</button>
+    </body>
         
-        <button onclick="directMain()" type="button" class="btn btn-danger text-dark">Go to main</button>
-        <button onclick="directSchedule()" type="button" class="btn btn-warning text-dark">Go to schedule</button>
-        <button onclick="document.getElementById('id_addtrain').style.display='block'" class="btn btn-logout text-dark">Add train</button>
         
-        <div id="id_addtrain" class="modal">
+        
+        <div id="id_addschedule" class="modal">
             <div class="modal-content animate" action="/action_page.php">
                 <div class="container">
 
-                        <label for="trainID"><b>Train ID</b></label>
-                        <input type="text" placeholder="Enter train ID" name="trainID" required id="trainID_field_sign">
+                        <label for="RouteID"><b>Route ID: (format '0')</b></label>
+                        <input type="text" pattern="\d" class="info-input" placeholder="Enter route ID" name="routeID" required id="routeID_field_sign">
             
-                        <label for="trainNB"><b>Home station id</b></label>
-                        <input type="text" placeholder="Enter train number" name="trainNB" required id="trainNB_field_sign">
-            
-                        <div class="clearfix">
-                                <button type="button" onclick="document.getElementById('id_addtrain').style.display='none'" class="cancelbtn">Cancel</button>
-                                <p><button onclick="addTrain()"type="submit" class="signup">Add</button></p>
-                        </div>                  
+                        <label for="trainNB"><b>Train number (format 'XX000X'):</b></label>
+                        <input type="text" pattern="[A-Z][A-Z]\d\d\d[A-Z]" class="info-input" placeholder="Enter train number" name="trainNB" required id="trainNB_field_sign">
+
+                        <label for="departureTM"><b>Departure time: (format '00:00')</b></label>
+                        <input type="text" pattern="^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$" class="info-input" placeholder="Enter departure time" name="departureTM" required id="departureTM_field_sign">
+
+                        <label for="arrivalTM"><b>Arrival time: (format '00:00')</b></label>
+                        <input type="text" pattern="^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$" class="info-input" placeholder="Enter arrival time" name="arrivalTM" required id="arrivalTM_field_sign">
+
+                        <button onclick="addSchedule()"type="submit" class="btn add-btn">Add</button>
+                        <p><button type="button" onclick="document.getElementById('id_addschedule').style.display='none'" class="btn cancel-btn">Cancel</button></p>                 
 
                 </div>
             </div>
         </div>
 
-    </body>
+   
     
     <!-- Initialize Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
@@ -55,4 +61,5 @@
       firebase.initializeApp(config);
     </script>
     <script src="adminScript.js"></script>
+    <script src="cookieScript.js"></script>
 </html>

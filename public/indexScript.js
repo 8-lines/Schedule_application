@@ -2,7 +2,7 @@ $(document).ready ( function (){
   
   var dbScheduleCount  = firebase.database().ref().child('schedule').child('count');
   
-  dbScheduleCount.on('value', snap => 
+  dbScheduleCount.once('value', snap => 
   {
       var scheduleCount = snap.val(); 
       ShowSchedules(scheduleCount);
@@ -13,10 +13,9 @@ $(document).ready ( function (){
 
 function ShowSchedules(scheduleCount){
   let ind = 1;
-  for (var i=1; i <= scheduleCount; i++) {
-
+  for (var i=1; i <= scheduleCount; i++) 
+  {
     var dbSchedule  = firebase.database().ref().child('schedule').child('schedule ' + i);
-
     dbSchedule.on('value', snap => 
     {
         var schedule = snap.val();
@@ -37,6 +36,7 @@ function ShowSchedules(scheduleCount){
                     ind += 1;
                     document.getElementById('schedulesField').innerHTML += list;
                 });
+                
             });
         });
         //window.alert(route);
@@ -69,10 +69,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 function login(){
-  isLog = firebase.auth().currentUser;
-  if (isLog==null)
+  user = firebase.auth().currentUser;
+  if (user==null)
   {
-    isLog = 1;
     var userEmail = document.getElementById("email_field").value.toString();
     var userPass = document.getElementById("passw_field").value.toString();
     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
@@ -80,19 +79,17 @@ function login(){
       var errorMessage = error.message;
       window.alert("Error: " + errorMessage);
     });
+    setCookie('LoginCookie', userEmail, {path: '/', exrises: 100});
+    document.location.href = "/admin.html";
   }
   else
   {
+    setCookie('LoginCookie', user.email, {path: '/', exrises: 100});
     window.alert("Allready logged in!" );
-    document.location.href = "/schedule.html";
+    document.location.href = "/admin.html";
   }
 }
 
-function logout(){
-  isLog = 0;
-  firebase.auth().signOut();
-  document.location.href = "/index.html";
-}
 
 function signup(){
   var userEmail = document.getElementById("email_field_sign").value.toString();
@@ -103,4 +100,8 @@ function signup(){
     window.alert("Error: " + " " + error.message);
   });
   isLog = 1;
+}
+
+function directMain(){
+  document.location.href = "/index.html";
 }
