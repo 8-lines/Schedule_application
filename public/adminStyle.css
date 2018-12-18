@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin');
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
 html {
 	overflow-y: scroll;
 }
@@ -49,36 +49,45 @@ body{
 }
 
 .btn-logout{
-	background-color: #f44336; 
+	white-space: normal;
+	background-color: rgb(244, 67, 54); 
 	color: white;
 	padding: 14px 20px;
 	margin-top: 3%;
-	margin-left: 3%;
-	width: 20%;
+	margin-left: 25%;
+	width: 50%;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.2em; 
 	border: none;
 	cursor: pointer;
 	opacity: 0.9;
 }
 
 .btn-main{
-	background-color: #4CAF50; 
+	white-space: normal;
+	background-color: rgb(76, 175, 80); 
 	color: white;
 	padding: 14px 20px;
 	margin-top: 3%;
-	margin-left: 3%;
-	width: 20%;
+	margin-left: 25%;
+	width: 50%;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.2em; 
 	border: none;
 	cursor: pointer;
 	opacity: 0.9;
 }
 
 .btn-add{
-	background-color: #D7DF01;
+	white-space: normal;
+	background-color: rgb(215, 223, 1);
 	color: white;
 	padding: 14px 20px;
 	margin-top: 3%;
-	margin-left: 17%;
-	width: 20%;
+	margin-left: 25%;
+	width: 50%;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.2em; 
 	border: none;
 	cursor: pointer;
 	opacity: 0.9;
@@ -104,4 +113,8 @@ body{
 	border: none;
 	cursor: pointer;
 	opacity: 0.9;
+}
+
+button:hover {
+	opacity:1;
 }

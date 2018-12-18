@@ -41,8 +41,6 @@ body{
 
 .btn-back{
 	background-color: #4CAF50;
-	margin-left: 0%;
-    margin-top: 0%; 
 	font-size: 1.1em; 
 	float: right;
 	color: #1a535c;
@@ -62,6 +60,7 @@ body{
 }
 
 .Schedule {
+	white-space: normal;
 	width: 96%;
 	word-spacing: 10px;
 	margin-left: 2%;
@@ -70,9 +69,59 @@ body{
 	padding: 18px;
 	font-family: "Roboto", sans-serif;
 	font-size: 1.2em;
-	line-height: 10px;
+	line-height: 25px;
 	background-color: rgb(230, 230, 230);
 	border: 3px solid #cccccc;
     border-radius: 4px;
-    text-align: left; 
+    text-align: center; 
+}
+
+@media (max-width:870px){
+	.btn-back{
+		margin-left:45%;
+	}
+	.ScheduleAll {
+		margin-left:25%;
+		width: 50%;
+		margin-top:10%;
+	}
+
+
+}
+
+@media (max-width:780px){
+	.btn-back{
+		margin-left:45%;
+	}
+	.ScheduleAll {
+		margin-left:20%;
+		width: 60%;
+		margin-top:10%;
+	}
+
+
+}
+
+@media (max-width:580px){
+	.btn-back{
+		margin-left:45%;
+	}
+	.ScheduleAll {
+		margin-left:15%;
+		width: 70%;
+		margin-top:15%;
+	}
+
+
+}
+
+@media (max-width:300px){
+	.btn-back{
+		margin-left:25%;
+	}
+	.ScheduleAll {
+		margin-top:20%;
+	}
+
+
 }

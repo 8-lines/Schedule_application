@@ -30,14 +30,14 @@ function ShowSchedule(number){
                 var travel = currStation.travel_time;
                 if (first)
                 {
-                  var listN = '<div class="Schedule">' + schedule.train_number + ": &nbsp;" + 
-                  currStation.station_name + " &nbsp;-&nbsp;&nbsp;" + time + '</div>';
+                  var listN = '<div class="Schedule">' + schedule.train_number + ": " + 
+                  currStation.station_name + " - " + time + '</div>';
                   document.getElementById('scheduleField').innerHTML += listN;
                   first = false;
                 }
                 time = newtime(time, travel);
-                var list = '<div class="Schedule">' + schedule.train_number + ": &nbsp;" + 
-                currStation.nextstation_name + " &nbsp;-&nbsp;&nbsp;" + time + '</div>';
+                var list = '<div class="Schedule">' + schedule.train_number + ": " + 
+                currStation.nextstation_name + " - " + time + '</div>';
                 document.getElementById('scheduleField').innerHTML += list;
             });
           }
@@ -59,12 +59,6 @@ function newtime(told, tdiff){
   if (minutes < 10) { minutes = "0" + minutes; }
   var str = hours + ":" + minutes;
   return str;
-}
-
-function logout(){
-  isLog = 0;
-  firebase.auth().signOut();
-  document.location.href = "/index.html";
 }
 
 function directMain(){

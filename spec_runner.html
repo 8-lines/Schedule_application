@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="./jasmine/jasmine_favicon.png">
+    <link rel="stylesheet" type="text/css" href="./jasmine/jasmine.css">
+
+    <script type="text/javascript" src="./jasmine/jasmine.js"></script>
+    <script type="text/javascript" src="./jasmine/jasmine-html.js"></script>
+    <script type="text/javascript" src="./jasmine/boot.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- source files... -->
+    <script src="src/additionalFunctions.js"></script>
+	<script src="src/testingFunctions.js"></script>
+
+    
+    <!-- spec files... -->
+	<script src="spec/tests.spec.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script>
+      var config = {
+        apiKey: "AIzaSyAhHvS21PscnljkB063RPbDQlVGromG2Vc",
+        authDomain: "train-transport.firebaseapp.com",
+        databaseURL: "https://train-transport.firebaseio.com",
+        projectId: "train-transport",
+        storageBucket: "train-transport.appspot.com",
+        messagingSenderId: "217283815223"
+      };
+      firebase.initializeApp(config);
+    </script>
+    
+</head>
+
+</html>
