@@ -7,32 +7,28 @@
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous">
         </script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=<57b72e8b-8302-416f-ae91-ddf6d1731563>&lang=ru_RU" type="text/javascript"></script>
     <head>
         <title> Train schedule </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="scheduleStyle.css">
+            
     </head>
     <body>
-        <button onclick="logout()" type="button" class="btn btn-logout text-dark">Log out</button>
+        <!-- <button onclick="logout()" type="button" class="btn btn-logout text-dark">Log out</button> -->
         <button onclick="directMain()" type="button" class="btn btn-back text-dark">Main</button>
     </body>
-        
-    <div class="ScheduleAll" id = "scheduleField"> </div>
+    
+    <div class="wrap"> <!--Создаем дополнительную обертку-родительский элемент -->
+        <div class="ScheduleAll" id = "scheduleField"> </div>
+        <div id="map" class="y-map"></div>
+    </div>
+    
     
     <!-- Initialize Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
-    <script>
-      var config = {
-        apiKey: "AIzaSyAhHvS21PscnljkB063RPbDQlVGromG2Vc",
-        authDomain: "train-transport.firebaseapp.com",
-        databaseURL: "https://train-transport.firebaseio.com",
-        projectId: "train-transport",
-        storageBucket: "train-transport.appspot.com",
-        messagingSenderId: "217283815223"
-      };
-      firebase.initializeApp(config);
-    </script>
+    <script src="firebaseScript.js"></script>
     <script src="scheduleScript.js"></script>
     <script src="cookieScript.js"></script>
 </html>

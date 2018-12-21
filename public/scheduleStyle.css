@@ -50,17 +50,26 @@ body{
 	opacity: 0.9;
 }
 
+.wrap
+{
+	width: 1310px;/*фиксируем ширину обертки*/
+	height: 800px;/*Задаем высоту обертки*/
+	margin-top: 7%;
+}
 
 .ScheduleAll {
-	margin-left: 30%;
+	margin-left: 5%;
+	float: left;
 	width: 40%;
-	margin-top: 5%;
+	/* margin-left: 50%;
+	margin-right: 10%;
+	margin-top: 5%; */
 	background-color: rgb(230, 230, 230, 0.85);
 	border: 3px solid #cccccc;
 }
 
 .Schedule {
-	white-space: normal;
+	white-space: right;
 	width: 96%;
 	word-spacing: 10px;
 	margin-left: 2%;
@@ -74,6 +83,16 @@ body{
 	border: 3px solid #cccccc;
     border-radius: 4px;
     text-align: center; 
+}
+
+.y-map {
+	margin-left: 10%;
+	float: left;
+	/* margin-top: 50px;
+	margin-left: 50px; */
+	width: 500px;
+	height: 400px;
+
 }
 
 @media (max-width:870px){
